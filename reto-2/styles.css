@@ -9,8 +9,8 @@
     --kumbh-Sans: 'Kumbh Sans', sans-serif;
 
     /* Pattern */
-    --circles-image: url('/reto-2/profile-card-component/images/bg-pattern-bottom.svg');
-    --header-image: url('/reto-2/profile-card-component/images/bg-pattern-card.svg')
+    --circles-image: url('/profile-card-component/images/bg-pattern-bottom.svg');
+    --header-image: url('/profile-card-component/images/bg-pattern-card.svg')
 }
 
 /* Spacings Reset */
