@@ -1,0 +1,163 @@
+:root{
+    /* Colors */
+    --dark-cyan: hsl(185, 75%, 39%);
+    --desaturated-blue: hsl(229, 23%, 23%);
+    --grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+
+    /* Fonts */
+    --kumbh-Sans: 'Kumbh Sans', sans-serif;
+
+    /* Pattern */
+    --circles-image: url('/reto-2/profile-card-component/images/bg-pattern-bottom.svg');
+    --header-image: url('/reto-2/profile-card-component/images/bg-pattern-card.svg')
+}
+
+/* Spacings Reset */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html{
+    background-color: var(--dark-cyan);
+    font-family: var(--kumbh-Sans);
+}
+
+/* Circles Pattern */
+html::after,
+html::before{
+    content: '';
+    background-image: var(--circles-image);
+    background-size: cover;
+    position: absolute;
+    width: 900px;
+    height: 900px;
+}
+
+html::before{
+    top: -500px;
+    left: -250px;
+
+    transform: rotate(100deg);
+}
+
+html::after{
+    bottom: -550px;
+    right: -250px;
+}
+
+
+/* Card */
+.card{
+    position: relative;
+    width: 335px;
+    height: 335px;
+
+    background-color: white;
+    z-index: 100;
+
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+.card_header{
+    width: 100%;
+    height: 135px;
+    background-image: var(--header-image);
+    background-size: cover;
+}
+
+.card_information{
+    width: 100%;
+    height: 140px;
+    position: relative;
+    border-bottom: 1px solid #E9E9E9;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_information img{
+    border-radius: 50%;
+    border: 5px solid white;
+    position: absolute;
+
+    /* Ugly */
+    top: 0;
+    bottom: 125px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /* ------------------- */
+
+    background-color: white;
+}
+
+.card_information h3{
+    margin-top: 50px;
+    font-size: 18px;
+}
+
+
+.card_information span{
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+
+span{
+    font-weight: 400;
+    color: #959597;
+    font-size: 18px;
+}
+
+.card_stats{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 13px;
+    
+}
+
+.card_stats h3{
+    padding: 20px 25px;
+}
+
+.card_stats span{
+    font-size: 11px;
+    margin-top: 18px;
+    letter-spacing: 2px;
+}
+
+/* Mobile */
+@media only screen and (max-width: 800px){
+    html::before{
+        top: -500px;
+        left: -550px;
+    
+        transform: rotate(100deg);
+    }
+    
+    html::after{
+        bottom: -550px;
+        right: -500px;
+    }
+}
