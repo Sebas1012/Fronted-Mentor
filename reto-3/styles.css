@@ -1,0 +1,170 @@
+:root{
+    /* Colors 
+    Primary: */
+    --cyan-color: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-cyan: hsl(179, 46%, 51%);
+    /* Neutral: */
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+
+    /* Font */
+    --font-karla: 'Karla', sans-serif;
+}
+
+/* Spacings Reset */
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: var(--light-gray);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--font-karla);
+}
+
+.card{
+    width: 520px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-header{
+    width: 100%;
+    height: 190px;
+
+    background-color: white;
+    text-overflow: visible;
+    
+}
+
+.card-header h3{
+    color: var(--cyan-color);
+    padding: 30px 0px 0px 35px;
+}
+
+.card-header h4{
+    color: var(--bright-yellow);
+    padding: 20px 0px 0px 35px;
+}
+
+.card-header p{
+    color: var(--grayish-blue);
+    font-size: 13px;
+    padding: 8px 40px 0px 35px;
+    line-height: 1.5;
+}
+
+.card-body{
+    width: 100%;
+    height: calc(100% - 190px);
+
+    display: flex;
+    flex-direction: row;
+}
+
+.card-body-item{
+    width: 50%; 
+    height: 100%;
+
+    padding: 30px 30px;
+}
+
+#price{
+    background-color: var(--cyan-color);
+    color: white;
+/* 
+    padding: 30px 0px 0px 35px; */
+}
+
+#price span{
+    color: #87E1E3;
+}
+
+#price h3{
+    font-size: 15px;
+}
+
+#p1{
+    font-size: 30px;
+    padding-top: 15px;
+}
+
+#p1 span{
+    font-size: 15px;
+}
+
+#p2{
+    padding-top: 8px;
+    padding-bottom: 35px;
+    font-size: 13px;
+}
+
+#price button{
+    background-color: var(--bright-yellow);
+    color: white;
+    width: 200px;
+    height: 40px;
+    border-radius: 6px;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+#price button:hover{
+    transform: scale(1.1);
+}
+
+#why-us{
+    background-color: var(--light-cyan);
+}
+
+#why-us h3{
+    color: white;
+    font-size: 15px;
+    padding-bottom: 15px;
+}
+
+#why-us ul{
+    color: #87E1E3;
+    list-style: none;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Mobile */
+@media only screen and (max-width: 800px){
+    body{
+        height: 120vh;
+    }
+
+    .card{
+        width: 300px;
+        height: auto;
+        position: relative;
+    }
+
+    .card-header{
+        height: 250px;
+    }
+
+    .card-body{
+        flex-direction: column;
+    }
+
+    .card-body-item{
+        width: 100%;
+        height: 50%;
+        
+    }
+}
